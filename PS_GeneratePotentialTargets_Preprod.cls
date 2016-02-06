@@ -4,7 +4,7 @@
  |  DATE            DEVELOPER        DESCRIPTION                               
  |  ====            =========        =========== 
  |  6/5/2015        IDC              This Class is used for creation 
-                                     of potential target records
+                                     of potential target recordsyyyyytest
  +===========================================================================*/
 
 global class PS_GeneratePotentialTargets{
