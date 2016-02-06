@@ -1,0 +1,18 @@
+{!REQUIRESCRIPT("/soap/ajax/14.0/connection.js")} 
+{!REQUIRESCRIPT("/soap/ajax/14.0/apex.js")} 
+var buttonAction = sforce.apex.execute("PS_GeneratePotentialTargets", "createPotentialTargets",{});
+//alert(buttonAction);
+ListViewport.instances[get('fcf')].refreshList();
+if(buttonAction > 0){
+alert(' There are still '+buttonAction+' Potential Targets Pending to generate.Click once again to generate');
+}
+else{
+   //alert('Error in Processing');
+}
+
+function get(name) { 
+    if (name = (new RegExp('[?&]' + encodeURIComponent(name) + 
+        '=([^&]*)')).exec(location.search)) { 
+        return decodeURIComponent(name[1]); 
+    }
+}
